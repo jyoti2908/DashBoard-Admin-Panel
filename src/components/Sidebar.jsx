@@ -1,4 +1,4 @@
-import React, { useContext } from "react"
+import { useContext } from "react"
 import { Link } from "react-router-dom";
 import { AuthContext } from "../context/AuthContext";
 
@@ -6,15 +6,15 @@ function Sidebar() {
     const { logout } = useContext(AuthContext)
 
     return (
-        <div className="h-screen bg-[#1C1C1C] text-white flex flex-col gap-8 ">
-            <h2 className="mx-auto text-2xl font-semibold rounded-bb-sm mt-8">ADMIN PANEL</h2>
-            <nav className="flex flex-col items-start justify-center mx-auto">
+        <div className="w-full px-2 py-6 bg-[#1C1C1C] text-white flex flex-col gap-8">
+            <h2 className="mx-auto py-4 text-2xl font-semibold mt-8">ADMIN PANEL</h2>
+            <nav className="mt-6 flex flex-col py-6 gap-6 border-[1px] bg-yellow-200 rounded-lg">
                 <Link to="/dashboard"> 🏠 DASHBOARD </Link>
                 <Link to='/analytics'> 📊 ANALYTICS </Link>
                 <Link to='/admin'> 🧑‍💼 ADMIN PAGE </Link>
             </nav>
             <button onClick={logout}
-                className="w-32 h-12 bg-blue-600 border-none text-sm rounded-full mx-auto">LOGOUT
+                className="mt-32 w-full h-12 bg-blue-600 border-none text-sm rounded-full mx-auto">LOGOUT
             </button>
         </div>
     )

@@ -13,14 +13,14 @@ const data = [
 
 function Chart() {
     return (
-        <div className="w-auto mx-auto h-[300px] flex items-center justify-center">
+        <div className="text-white px-20 w-screen h-[300px] flex items-center justify-center">
             <ResponsiveContainer width="100%" height="100%" >
                 <LineChart data={data}>
-                    <Line type="monotone" dataKey="users" stroke="#8884d8" strokeWidth={2} />
+                    <Line type="monotone" dataKey="users" stroke="red" strokeWidth={2} />
                     <XAxis dataKey="name" />
                     <YAxis />
                     <Tooltip />
-                    <CartesianGrid stroke="#ccc" strokeDasharray="5 5" />
+                    <CartesianGrid stroke="black" strokeDasharray="5 5" />
                 </LineChart>
             </ResponsiveContainer>
         </div>
